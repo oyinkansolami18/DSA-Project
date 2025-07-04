@@ -1,5 +1,5 @@
 # DSA-Project
-Business Intelligence Projects – Kultra Mega Stores & Palmoria Group
+ Kultra Mega Stores & Palmoria Group
 This repository contains two complete case studies performed as part of a data analytics and business intelligence portfolio. The projects demonstrate real-world analysis of sales and HR datasets using SQL, Excel, and Power BI, with a focus on actionable insights and business impact.
 
 🗂️ Projects Overview
