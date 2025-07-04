@@ -100,7 +100,7 @@ Group By
 Order By
 		total_sales DESC
 
---  Corporate Customer placed the most number of orders in 2009 � 2012
+--  Corporate Customer placed the most number of orders in 2009 – 2012
 SELECT 
 	[Customer Segment],
 	COUNT([Order ID]) As Total_Orders,
@@ -163,4 +163,29 @@ Group By
 
 Order By
 	[Order Priority],[Ship Mode]
+
+Findings:
+	1.	High Priority Orders (Critical, High):
+	•	Should be shipped using Express Air (fastest), even if expensive.
+	•	However, most expensive shipping cost is via Delivery Truck (~$45–47), which is actually the slowest, and is being used for Critical and High orders.
+	•	Express Air cost is only ~$8.7, yet it’s underused where it should be prioritized.
+	2.	Low Priority Orders (Low, Medium, Not Specified):
+	•	Should ideally be shipped via Delivery Truck to minimize cost.
+	•	But most are shipped using Express Air and Regular Air, even though speed isn’t required.
+	•	For example:
+	•	Low Priority + Express Air = $8.17
+	•	Not Specified + Express Air = $8.17
+	•	These could have been handled more economically.
+
+
+❌ Conclusion: Shipping cost allocation is not appropriate.
+	•	The slowest method (Delivery Truck) is being used for Critical and High orders, despite its high cost, which defeats the urgency logic.
+	•	Meanwhile, Express Air is used more for Low/Not Specified priority orders — where speed is not required, leading to unnecessary spending.
+	•	This suggests inefficient logistics planning: neither speed nor cost optimization is aligned with order priority.
+
+
+✅ Recommendation:
+	•	Re-align shipping methods:
+	•	Use Express Air only for Critical & High priority.
+	•	Use Delivery Truck or Regular Air for Low/Medium/Not Specified to control cost.
 	
